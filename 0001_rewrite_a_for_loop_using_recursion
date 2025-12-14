@@ -1,0 +1,13 @@
+"""
+Source
+https://pybitesplatform.com/bites/rewrite-a-for-loop-using-recursion/
+"""
+
+def my_solution(default=10):
+    if number > 0:
+        print(number)
+        my_solution(number - 1)
+    elif number == 0:
+        print("time is up")
+    else:
+        print("number must be >= 0")
