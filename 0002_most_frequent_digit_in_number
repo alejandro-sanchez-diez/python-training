@@ -1,0 +1,26 @@
+"""
+Source
+https://pybitesplatform.com/bites/most-frequent-digit-in-number/
+"""
+
+def my_solution(num: int) -> int:
+    list = []
+    while num > 0:
+        list.append(num % 10)
+        num = num // 10
+    list.reverse()
+    
+    dic = {}
+    for e in list:
+        if e in dic:
+            dic[e] += 1
+        else:
+            dic[e] = 1
+    
+    dic_key = next(iter(dic), None)
+    for e in dic:
+        if dic[e] > dic[dic_key]:
+            dic_key = e
+    
+    return dic_key
+
