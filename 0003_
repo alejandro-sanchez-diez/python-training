@@ -1,0 +1,26 @@
+"""
+Source
+https://pybitesplatform.com/bites/armstrong-numbers/
+"""
+
+def is_armstrong(n: int) -> bool:
+    og = n
+    list = []
+    while n > 0:
+        aux = n % 10
+        list.append(aux)
+        n = n // 10
+    print(list)
+    
+    sum = 0
+    for e in list:
+        sum += e**len(list)
+    print(sum)
+    
+    if og == sum:
+        return True
+    else:
+        return False
+
+print(is_armstrong(9))
+         
